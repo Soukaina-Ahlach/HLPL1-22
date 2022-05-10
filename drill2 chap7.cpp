@@ -198,7 +198,7 @@ void Date::add_day(int n)
 				cout << "szia! it's not year 3000; " << endl;
 		}
 		else
-			m = Month(nextM);			//and you get a c cast
+			m = Month(nextM);			
 	}
 }
 
@@ -207,7 +207,7 @@ void Date::add_day(int n)
 ostream& operator<<(ostream& os, const Date& d)
 {
 	return os << "(" << d.year()
-		<< "," << int(d.month())	// you all get c casts!
+		<< "," << int(d.month())	
 		<< "," << d.day() << ")";
 }
 
