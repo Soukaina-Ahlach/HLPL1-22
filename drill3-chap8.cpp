@@ -15,7 +15,7 @@ void swap_r(int &a, int &b)
 	a = b;
 	b = temp;
 }
-// expression must be a modifiable lvalue
+// 
 void swap_cr(const int& a, const int& b)
 {
 	int temp = a;
@@ -33,12 +33,12 @@ int main()
 	cout << x << "  " << y << endl;
 	const int cx = 7;
 	const int cy = 9;
-
+       // won't work because we are trying to swap constants
 	swap_cr(cx, cy);
 	cout << cx << "  " << cy << endl;
 	swap_v(7.7, 9.9);
 	
-	// error because it is double
+	// this won't work because the variables are of type double
 	double dx = 7.7;
 	double dy = 9.9;
 	swap_r(dx, dy);
